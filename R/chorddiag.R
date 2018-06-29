@@ -122,7 +122,7 @@ chorddiag <- function(data,
         stop("'data' must be a matrix class object.")
 
     d <- dim(data)
-    if (type == "bipartite" || type == "symmetric") {
+    if (type == "bipartite") {
         g1 <- d[1]
         g2 <- d[2]
         n <- g1 + g2
