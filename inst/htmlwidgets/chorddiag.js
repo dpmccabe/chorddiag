@@ -92,6 +92,8 @@ HTMLWidgets.widget({
                                          return dir1 + (vji > 0 ? "</br>" + dir2 : "");
                                      }
                                  }
+                             } else if (type == "symmetric") {
+                                 return dir1;
                              } else if (type == "bipartite") {
                                  return dir2;
                              }

@@ -122,7 +122,7 @@ chorddiag <- function(data,
         stop("'data' must be a matrix class object.")
 
     d <- dim(data)
-    if (type == "bipartite") {
+    if (type == "bipartite" || type == "symmetric") {
         g1 <- d[1]
         g2 <- d[2]
         n <- g1 + g2
@@ -139,7 +139,7 @@ chorddiag <- function(data,
             categoryNames <- names(dimnames(data))
         }
         data <- m
-    } else if (type == "directional") {
+    } else if (type == "directional" || type == "symmetric") {
         if (d[1] != d[2] ) stop("'data' must be a square matrix.")
         n <- d[1]
     }
@@ -166,7 +166,7 @@ chorddiag <- function(data,
     }
 
     if (is.null(groupColors)) {
-        if (type == "directional") {
+        if (type == "directional" || type == "symmetric") {
             groupColors <- RColorBrewer::brewer.pal(n, palette)
         } else if (type == "bipartite") {
             groupColors <- c(
