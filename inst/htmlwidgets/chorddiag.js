@@ -80,8 +80,8 @@ HTMLWidgets.widget({
                              // values
                              var vij = sigFigs(matrix[i][j], precision),
                                  vji = sigFigs(matrix[j][i], precision);
-                             var dir1 = tooltipNames[i] + tooltipGroupConnector + tooltipNames[j] + ": " + vij + tooltipUnit,
-                                 dir2 = tooltipNames[j] + tooltipGroupConnector + tooltipNames[i] + ": " + vji + tooltipUnit;
+                             var dir1 = groupNames[i] + tooltipGroupConnector + groupNames[j] + ": " + vij + tooltipUnit,
+                                 dir2 = groupNames[j] + tooltipGroupConnector + groupNames[i] + ": " + vji + tooltipUnit;
                              if (type == "directional") {
                                  if (i == j) {
                                      return dir1;
