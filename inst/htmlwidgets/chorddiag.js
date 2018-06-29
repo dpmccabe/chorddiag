@@ -106,8 +106,7 @@ HTMLWidgets.widget({
                          .direction('mt')
                          .offset([10, 10])
                          .html(function(d) {
-                             var value = sigFigs(d.value, precision);
-                             return tooltipNames[d.index] + " (total): " + value + tooltipUnit;
+                             return tooltipNames[d.index];
                          });
     }
 
